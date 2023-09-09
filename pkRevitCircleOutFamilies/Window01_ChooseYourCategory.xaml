@@ -1,0 +1,108 @@
+﻿<Window x:Class="_937_PRLoogle_Command02.Window01_ChooseYourCategory"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_937_PRLoogle_Command02"
+        mc:Ignorable="d"
+        Title="Circle Out Family / Circle Out Family's Type" Height="450" Width="800" Topmost="True" Loaded="Window_Loaded" ResizeMode="NoResize" Closing="Window_Closing">
+    <Window.Resources>
+        <ResourceDictionary>
+
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/PresentationFramework.Aero;component/themes/Aero.NormalColor.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <ListView x:Name="myListView_2017" HorizontalAlignment="Left" Margin="18,-164,0,515" Width="244">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}"/>
+                </GridView>
+            </ListView.View>
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <EventSetter Event="PreviewMouseDoubleClick" Handler="ListViewItem_PreviewMouseDoubleClick"/>
+                    <!--<EventSetter Event="RequestBringIntoView" Handler="RequestBringIntoView"></EventSetter>-->
+                    <Setter Property="VerticalContentAlignment" Value="Top"/>
+                </Style>
+            </ListView.ItemContainerStyle>
+        </ListView>
+        <TextBox x:Name="myTextbox_1903" HorizontalAlignment="Left" Height="22" Margin="18,-192,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="164" KeyUp="TextBox_KeyUp"/>
+        <Button Content="Clear" HorizontalAlignment="Right" Margin="0,-192,3,0" VerticalAlignment="Top" Width="74" Height="20" Click="Button_Click"/>
+        <ListView x:Name="myListView_1811" Grid.Column="1" Margin="17,-164,2,515"  >
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Width="1000">
+
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <EventSetter Event="PreviewMouseDoubleClick" Handler="ListViewItem_PreviewMouseDoubleClick_1811"  />
+                    <EventSetter Event="PreviewMouseDown" Handler="ListViewItem_MouseDown_1811"  />
+                    <!--<EventSetter Event="RequestBringIntoView" Handler="RequestBringIntoView"></EventSetter>-->
+                    <Setter Property="VerticalContentAlignment" Value="Top"/>
+                </Style>
+            </ListView.ItemContainerStyle>
+        </ListView>
+        <Label Content="↓" Grid.Column="2" HorizontalAlignment="Left" Margin="97,77,0,0" VerticalAlignment="Top" Height="90" Width="50" FontSize="72"/>
+        <Button x:Name="myMakeCircles" Content="Circle Out Family" Grid.Column="2" Margin="54,44,76,0" Height="42" VerticalAlignment="Top" Click="MyMakeCircles_Click" FontSize="16"/>
+        <TextBox x:Name="myTextBox_2007" Grid.Column="2" Height="23" Margin="7,10,13,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <ListView x:Name="myListView_1647" Grid.Column="2" Margin="43,-217,-23,502">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <EventSetter Event="PreviewMouseDoubleClick" Handler="ListViewItem_PreviewMouseDoubleClick_1647"/>
+                    <!--<EventSetter Event="RequestBringIntoView" Handler="RequestBringIntoView"></EventSetter>-->
+                    <Setter Property="VerticalContentAlignment" Value="Top"/>
+                </Style>
+            </ListView.ItemContainerStyle>
+        </ListView>
+        <Label Content="Recently Removed" Grid.Column="2" HorizontalAlignment="Left" Margin="43,-248,0,0" VerticalAlignment="Top" Width="218"/>
+        <Button x:Name="myMakeCirclesTypes"  Grid.Column="2" Margin="54,308,76,0" Height="50" VerticalAlignment="Top"  FontSize="16" Click="myMakeCirclesTypes_Click">
+            <StackPanel >
+                <TextBlock Text="Circle Out" HorizontalAlignment="Center"/>
+                <TextBlock HorizontalAlignment="Center"><Run Text="a Family Type"/><Run Text="s"/></TextBlock>
+            </StackPanel>
+        </Button>
+
+        <Label Content="← Select one from&#xD;&#xA;      Family circle" Grid.Column="2" HorizontalAlignment="Left" Margin="130,111,0,0" VerticalAlignment="Top" Width="110"/>
+        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="367" Margin="12,11,0,0" VerticalAlignment="Top" Width="244">
+
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="ListBoxItem">
+                    <EventSetter Event="PreviewMouseDown" Handler="ListBoxItem_MouseDown_1811"  />
+                    <!--<EventSetter Event="RequestBringIntoView" Handler="RequestBringIntoView"></EventSetter>-->
+                    <Setter Property="VerticalContentAlignment" Value="Top"/>
+                </Style>
+            </ListBox.ItemContainerStyle>
+
+        </ListBox>
+        <ListBox x:Name="listBoxFilters" HorizontalAlignment="Left" Height="363" Margin="10,11,0,0" VerticalAlignment="Top" Width="244" Grid.Column="1">
+
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="ListBoxItem">
+                    <EventSetter Event="PreviewMouseDown" Handler="ListBoxItem_MouseDown_1812"  />
+                    <!--<EventSetter Event="RequestBringIntoView" Handler="RequestBringIntoView"></EventSetter>-->
+                    <Setter Property="VerticalContentAlignment" Value="Top"/>
+                </Style>
+            </ListBox.ItemContainerStyle>
+
+        </ListBox>
+        <Button Content="Select &amp; check count" Grid.Column="2" HorizontalAlignment="Left" Margin="60,167,0,0" VerticalAlignment="Top" Width="124" Click="Button_Click_1"/>
+        <Label Content="↓" Grid.Column="2" HorizontalAlignment="Left" Margin="97,204,0,0" VerticalAlignment="Top" Height="90" Width="50" FontSize="72"/>
+        <TextBox x:Name="myTextBox_2022" Grid.Column="2" Height="23" Margin="7,192,13,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+    </Grid>
+</Window>
